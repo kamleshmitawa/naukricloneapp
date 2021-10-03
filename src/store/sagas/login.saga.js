@@ -12,8 +12,8 @@ function* userLogin(action) {
       axiosRequest(url, type, data)
     );
     if (res) {
-      setLocalStorage('token', res?.body?.token)
-      yield put({ type: SAVE_USER_LOGIN, payload: res?.body });
+      setLocalStorage('token', res?.token)
+      yield put({ type: SAVE_USER_LOGIN, payload: res });
       history.push(routePath.jobsPosted)
     }
   } catch (err) {
@@ -56,7 +56,9 @@ function* pwdForgot(action) {
       axiosRequest(url, type)
     );
     if (res) {
-      setLocalStorage('token', res?.data?.token)
+      if(res?.token){
+        setLocalStorage('token', res?.token)
+      }
     yield put({ type: SAVE_FORGOT_PASSWORD, payload: res });
       history.push(routePath.login)
     }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
-import { checkLoginValidation } from "../../utils/utils";
+import { checkLoginValidation, clearLocalStorage } from "../../utils/utils";
 import { USER_LOGIN } from "../../store/types/login.type";
 import { serviceRoute } from "../../apis/serviceRoute";
 
@@ -17,6 +17,9 @@ export const Login = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
+  useEffect(()=> 
+   clearLocalStorage()
+  ,[])
   useEffect(() => {
     setErrorMsg(loginResponseErr);
   }, [loginResponseErr]);

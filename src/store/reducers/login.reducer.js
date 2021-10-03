@@ -28,19 +28,19 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case SAVE_USER_LOGIN: {
-      return { ...state, loginResponse: payload, loginResponseErr: '' };
+      return { ...state, loginResponse: payload, loginResponseErr: '', loginLoader: false };
     }
     case SAVE_USER_LOGIN_ERROR: {
-      return { ...state, loginResponseErr: payload, loginResponse: null };
+      return { ...state, loginResponseErr: payload, loginResponse: null, loginLoader: false };
     }
     case LOGIN_LOADER: {
       return { ...state, loginLoader: payload };
     }
     case SAVE_USER_SIGNUP: {
-      return { ...state, signUpResponse: payload, signupResponseErr: '' };
+      return { ...state, signUpResponse: payload, signupResponseErr: '', signUpLoader: false };
     }
     case SAVE_USER_SIGNUP_ERROR: {
-      return { ...state, signupResponseErr: payload, signUpResponse: null };
+      return { ...state, signupResponseErr: payload, signUpResponse: null, signUpLoader: false };
     }
     case SIGNUP_LOADER: {
       return { ...state, signUpLoader: payload };

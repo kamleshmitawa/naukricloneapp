@@ -12,8 +12,10 @@ import { routePath } from "./routes/routePath";
 import { SignUp } from "./components/Login/SignUp";
 import { Forgot } from "./components/Login/Forgot";
 import { ResetPassword } from "./components/Login/ResetPassword";
-import "./App.css";
 import { PostedJobs } from "./components/Jobs/PostedJobs";
+
+import './global.css';
+import "./App.css";
 
 const App = () => {
   return (
