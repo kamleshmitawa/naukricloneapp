@@ -13,13 +13,13 @@ export const Forgot = () => {
   const [email, setEmail] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
-  const { forgotResponseErr } = useSelector(state=> state.login)
+  const { forgotResponseErr } = useSelector((state) => state.login);
   const dispatch = useDispatch();
   const history = useHistory();
 
   useEffect(() => {
-    setErrorMsg(forgotResponseErr)
-  }, [forgotResponseErr])
+    setErrorMsg(forgotResponseErr);
+  }, [forgotResponseErr]);
 
   const onChangeHandler = (e) => {
     setEmail(e.target.value);
@@ -39,10 +39,11 @@ export const Forgot = () => {
   };
 
   return (
-    <div className="main-container">
-      <div className="row forgot_container">
+    <>
+      <div className="bannerSection"></div>
+      <div className="loginSectn forgotSectn">
+        <div className="heading">Forgot your password?</div>
         <form>
-          <h2>Forgot your password?</h2>
           <p>
             Enter the email associated with your account and we’ll send you
             instructions to reset your password.
@@ -60,9 +61,11 @@ export const Forgot = () => {
             />
             {errorMsg ? <div className="error">{errorMsg}</div> : ""}
           </div>
+          <div className="row login_btn">
           <Button title="Submit" onClickHandler={forgotPasswordHandler} />
+          </div>
         </form>
       </div>
-    </div>
+    </>
   );
 };

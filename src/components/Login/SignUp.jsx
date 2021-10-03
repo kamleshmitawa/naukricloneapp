@@ -27,7 +27,7 @@ export const SignUp = () => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  useEffect(()=> setErrorMsg(signupResponseErr), [signupResponseErr])
+  useEffect(() => setErrorMsg(signupResponseErr), [signupResponseErr]);
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -44,7 +44,7 @@ export const SignUp = () => {
         payload: { ...serviceRoute.register, data: payload, history },
       });
     } else {
-      setErrorMsg([{ name : valid?.error }]);
+      setErrorMsg([{ name: valid?.error }]);
     }
   };
   const {
@@ -60,23 +60,24 @@ export const SignUp = () => {
     return <Loader />;
   }
   return (
-    <div className="main-container">
-      <div className="row login_container">
+    <>
+      <div className="bannerSection"></div>
+      <div className="loginSectn forgotSectn">
+        <div className="heading">Signup</div>
         <form>
-          <h2>Signup</h2>
           <p>I’m a*</p>
           <div className="row signup_roles">
-            <div className={userRole === 0 ? "" : "notactive" }>
-            <Button
-              title="Recruiter"
-              onClickHandler={() => setPayload({ ...payload, userRole: 0 })}
-            />
+            <div className={userRole === 0 ? "role1" : "role1 notactive"}>
+              <Button
+                title="Recruiter"
+                onClickHandler={() => setPayload({ ...payload, userRole: 0 })}
+              />
             </div>
-            <div className={userRole === 1 ? "" : "notactive" }>
-            <Button
-              title="Candidate"
-              onClickHandler={() => setPayload({ ...payload, userRole: 1 })}
-            />
+            <div className={userRole === 1 ? "role2" : "role2 notactive"}>
+              <Button
+                title="Candidate"
+                onClickHandler={() => setPayload({ ...payload, userRole: 1 })}
+              />
             </div>
           </div>
           <div className="form-group">
@@ -139,16 +140,22 @@ export const SignUp = () => {
               onChange={onChangeHandler}
             />
           </div>
-          {errorMsg?.length ? <div className="error">{errorMsg.map(err=> err.name)}</div> : ""}
-          <Button title="Signup" onClickHandler={onSignupHandler} />
+          {errorMsg?.length ? (
+            <div className="error">{errorMsg.map((err) => err.name)}</div>
+          ) : (
+            ""
+          )}
+          <div className="row login_btn">
+            <Button title="Signup" onClickHandler={onSignupHandler} />
+          </div>
           <div>
             Have a account?
             <span>
-              <Link to={routePath.login}>Login</Link>
+              <Link to={routePath.login}> Login</Link>
             </span>
           </div>
         </form>
       </div>
-    </div>
+    </>
   );
 };

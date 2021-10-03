@@ -1,5 +1,6 @@
 import React from "react";
-import './home.css'
+import { routePath } from "../../routes/routePath";
+import "./home.css";
 
 export const Home = () => {
   return (
@@ -11,14 +12,14 @@ export const Home = () => {
               <h1>
                 Welcome to <br /> My<span>Jobs</span>
               </h1>
-              <button type="button" class="getStarted btn">
+              <a href={routePath.login} class="getStarted btn">
                 Get Started
-              </button>
+              </a>
             </div>
             <div class="col-lg-7">
               <figure>
                 <img
-                  src="assets/images/happy-customer.jpg"
+                  src="../../images/happycustomer.jpg"
                   alt="happy-customer"
                   width="622"
                   height="395"
@@ -78,7 +79,7 @@ export const Home = () => {
           <ul>
             <li>
               <figure>
-                <img src="assets/images/otherLogo.png" alt="otherLogo" />
+                <img src="../../images/otherLogo.jpg" alt="otherLogo" />
               </figure>
             </li>
             <li>
@@ -124,112 +125,6 @@ export const Home = () => {
           </ul>
         </div>
       </div>
-
-      {/* <div class="applicantsJobPopUp">
-        <div class="applicantsJob">
-          <div class="heading">
-            <div>Applicants for this job</div>
-            <span class="close"></span>
-          </div>
-          <div class="totalApplicants">Total 35 applications</div>
-          <div class="allApplications">
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-            <div class="application">
-              <div class="applicantName">
-                <span class="letter">E</span>
-                <label for="">Eliza Lucas</label>
-                <div class="email">abc123@email.com</div>
-              </div>
-              <div class="">Skills</div>
-              <div class="skills">
-                Coding, designing, graphics, website, app ui
-              </div>
-            </div>
-          </div>
-          <div class="noApplication">
-            <div>
-              <img src="#" alt="noaplicantion" />
-              <p>No applications available!</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </>
   );
 };

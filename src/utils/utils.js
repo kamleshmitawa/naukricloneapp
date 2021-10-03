@@ -56,19 +56,37 @@ export const checkForgotValidation = (email = "") => {
   return validateObj;
 };
 
-
 export const checkResetPwdValidation = (resetData) => {
   let validateObj = { isValid: true, error: "" };
-const { password = "", confirmPassword = "" } = resetData;
+  const { password = "", confirmPassword = "" } = resetData;
 
-   if (password.length < 8) {
+  if (password.length < 8) {
     validateObj.error = "password length at-least should be 8";
     validateObj.isValid = false;
-  }
-  else if (password !== confirmPassword) {
+  } else if (password !== confirmPassword) {
     validateObj.error = "confirm password should be same as create password";
     validateObj.isValid = false;
   }
+  return validateObj;
+};
+
+export const checkPostJobValidation = (jobData) => {
+  const { title = "", description = "", location = "" } = jobData;
+
+  let validateObj = { isValid: true, error: "" };
+
+  if (title === '') {
+    validateObj.error = "All fields are mandatory.";
+    validateObj.isValid = false;
+  } else if (description === '') {
+    validateObj.error = "All fields are mandatory.";
+    validateObj.isValid = false;
+  }
+  else if (location === '') {
+    validateObj.error = "All fields are mandatory.";
+    validateObj.isValid = false;
+  }
+
   return validateObj;
 };
 

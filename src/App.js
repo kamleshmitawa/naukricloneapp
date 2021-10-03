@@ -16,6 +16,7 @@ import { PostedJobs } from "./components/Jobs/PostedJobs";
 
 import './global.css';
 import "./App.css";
+import { PostJob } from "./components/Header/PostJob";
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
             <Route exact component={SignUp} path={routePath.signUp} />
             <Route exact component={Forgot} path={routePath.forgot} />
             <Route exact component={ResetPassword} path={routePath.reset} />
+            <Route exact component={PostJob} path={routePath.jobPost} />
             <Route exact component={PostedJobs} path={routePath.jobsPosted} />
             <Route path={routePath.logout} component={Login} />
             <Route component={Default} />

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { routePath } from "../routes/routePath";
 import { getLocalStorage } from "../utils/utils";
 
 const baseURL = process.env.REACT_APP_BASE_URL;
@@ -29,21 +30,23 @@ const config = {
   },
 };
 
-export const axiosRequest = async (url, type, data = {}) => {
+export const axiosRequest = async (url, type, history, data = undefined) => {
   try {
-    // let response = {};
-    console.log({ url, type, data });
-    // response = await axiosInstance.post(url, data, config);
+    let response = {};
+    console.log({ url, type, token: getLocalStorage("token"), config });
 
-    // if (type === "GET") {
-    //   response = await axiosInstance.get(url);
-    // } else {
-    let response = await axiosInstance[type](url, data, config);
-    // }
+    if (data) {
+      response = await axiosInstance[type](url, data, config);
+    } else {
+      response = await axiosInstance.get(url, config);
+    }
     console.log({ response });
     return response?.data;
   } catch (error) {
     console.log(error, "axiosRequesterrorerror");
+    if (error.code === 401) {
+      // history.push(routePath.login)
+    }
     return Promise.reject(error);
   }
 };

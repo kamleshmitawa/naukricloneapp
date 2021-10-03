@@ -53,7 +53,7 @@ export const Login = () => {
         <div className="heading">Login</div>
         <form>
           <div className={errorMsg ? "form-group error" : "form-group"}>
-            <label htmlFor="email">Email address</label>
+            <label htmlFor="email">Email Address</label>
             <input
               type="email"
               className="form-control"
@@ -85,15 +85,15 @@ export const Login = () => {
             />
             {errorMsg ? <div className="errorMsg">{errorMsg}</div> : ""}
           </div>
-          <div className="text-center">
-            <Button title="login" onClickHandler={onLoginHandler} />
-            <p>
+          <div className="row login_btn">
+            <Button title="Login" onClickHandler={onLoginHandler} />
+          </div>
+          <p>
               New to MyJobs?
               <span>
-                <Link to="/signup">Create an account</Link>
+                <Link to="/signup"> Create an account</Link>
               </span>
             </p>
-          </div>
         </form>
       </div>
     </>
