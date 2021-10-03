@@ -1,0 +1,47 @@
+body{background: #EDF6FF}
+.loginSectn{padding: 30px;margin: 0 auto;max-width: 557px;position: relative;top: -220px;background: #fff;box-shadow: 0px 30px 36px #557DA526;border-radius: 20px;z-index: 1}
+.postAjob{padding: 30px;margin: 0 auto;max-width: 557px;position: relative;top: -220px;background: #fff;box-shadow: 0px 30px 36px #557DA526;border-radius: 20px;z-index: 1}
+.postAjob .heading{margin-bottom: 23px;color: #303F60;font-size: 22px;}
+.postAjob .formButton{margin: 25px 0px 0px}
+.bannerSection{padding-top: 61px;color: #fff; display: block;position: relative;height: 394px;background: transparent linear-gradient(248deg, #303F60 0%, #1A253C 100%) 0% 0% no-repeat padding-box;}
+/*.bannerSection::before{content: '';position: absolute;width: 100%;height:394px; }*/
+.bannerSection h1{margin-bottom: 40px;font-size: 60px;}
+.bannerSection h1 span{color: #43AFFF}
+.bannerSection .getStarted{padding: 13px 30px 14px;border: 1px solid #43AFFF;background: #43AFFF;color: #fff;border-radius: 5px;font-size: 16px;}
+.bannerSection figure{margin: 0 auto;width: 622px;height: 395px;overflow: hidden;border-radius: 20px;}
+
+.whyUs{padding: 142px 0px 0px;}
+.whyUs h2{margin-bottom: 40px;font-size: 22px;}
+.whyUs .whyUsCard{padding: 24px 20px;background: #fff;box-shadow: 0px 3px 6px #557DA526;border-radius: 5px;}
+.whyUs .whyUsCard .heading{margin-bottom: 29px;font-size: 22px;color: #43AFFF;}
+.whyUs .whyUsCard span{font-size: 15px;color: #303F60}
+
+.conpaniesTrust{padding-top: 80px;}
+.conpaniesTrust .heading{margin-bottom: 40px;font-size: 22px;}
+.conpaniesTrust ul{text-align: center}
+.conpaniesTrust li{margin-right: 112px;margin-bottom: 55px; display: inline-block}
+.conpaniesTrust li:nth-child(5),.conpaniesTrust li:nth-child(9){margin: 0;}
+.conpaniesTrust figure{width:  125px;height: 40px;}
+.conpaniesTrust figure img{width:  125px;height: 40px;}
+.applicantsJobPopUp{position: fixed;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0,0,0,0.65); z-index: 5;display: none}
+.applicantsJobPopUp.active{display: block}
+.applicantsJob{padding: 37px 30px;max-width: 694px;width: 100%;position: absolute;left: 50%;top: 50%;border-radius: 20px;background: #fff;transform: translate(-50%, -50%);z-index: 6}
+.applicantsJob .heading{padding-bottom: 20px;margin-bottom: 11px; border-bottom: 1px solid #303F60; position: relative;font-size: 19px;color: #303F60;font-weight: bold}
+/*.applicantsJob .heading span{position: absolute;right: 0;top: 0;}*/
+.applicantsJob .heading .close{position: absolute;right: 5px;top: 12px;cursor: pointer}
+.applicantsJob .heading .close::before{content: '';position: absolute;left: 0;top: 0;width: 20px;height: 2px;background: #000;transform: translate(-50%, -50%) rotate(45deg);border-radius: 8px}
+.applicantsJob .heading .close::after{content: '';position: absolute;left: 0;top: 0;width: 20px;height: 2px;background: #000;transform: translate(-50%, -50%) rotate(135deg);border-radius: 8px;transition: 0.3s}
+.applicantsJob .totalApplicants{margin-bottom: 10px;font-size: 15px;color: #303F60;}
+.applicantsJob .allApplications{padding: 9px 8px;background: #A9AFBC;border-radius: 10px;max-height: 598px;height: 100%;overflow: hidden;overflow-y: auto;display: grid;grid-template-columns: repeat(2,1fr);gap: 30px;}
+.applicantsJob .application{padding: 14px;background: #fff;border: 1px solid #303F6080;border-radius: 5px;}
+.applicantsJob .application .applicantName{padding: 0px 0px 0px 70px;margin-bottom: 25px;display: block;position: relative;}
+.applicantsJob .application .applicantName label{margin-bottom: 10px;font-size: 15px;display: block;font-weight: bold}
+.applicantsJob .application .applicantName .email{font-size: 15px;}
+.applicantsJob .application .letter{position: absolute;left: 0;top: 0;width: 50px;height: 50px;border-radius: 50%;display: flex;align-items: center;justify-content: center;background: #D9EFFF;font-size: 20px;color: #303F60;}
+.applicantsJob .noApplication{width: 100%;height: 598px;display: flex;align-items: center;justify-content: center;}
+.applicantsJob .noApplication img{margin-bottom: 20px;}
+
+
+
+
+
