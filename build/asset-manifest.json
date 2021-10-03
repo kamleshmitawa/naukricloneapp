@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/naukricloneapp/static/css/main.7666b14f.chunk.css",
-    "main.js": "/naukricloneapp/static/js/main.1c3236aa.chunk.js",
-    "main.js.map": "/naukricloneapp/static/js/main.1c3236aa.chunk.js.map",
+    "main.css": "/naukricloneapp/static/css/main.ad410c19.chunk.css",
+    "main.js": "/naukricloneapp/static/js/main.1d246206.chunk.js",
+    "main.js.map": "/naukricloneapp/static/js/main.1d246206.chunk.js.map",
     "runtime-main.js": "/naukricloneapp/static/js/runtime-main.64466724.js",
     "runtime-main.js.map": "/naukricloneapp/static/js/runtime-main.64466724.js.map",
-    "static/js/2.4ecbb7e2.chunk.js": "/naukricloneapp/static/js/2.4ecbb7e2.chunk.js",
-    "static/js/2.4ecbb7e2.chunk.js.map": "/naukricloneapp/static/js/2.4ecbb7e2.chunk.js.map",
+    "static/js/2.43a2bb34.chunk.js": "/naukricloneapp/static/js/2.43a2bb34.chunk.js",
+    "static/js/2.43a2bb34.chunk.js.map": "/naukricloneapp/static/js/2.43a2bb34.chunk.js.map",
     "static/js/3.f76cbb96.chunk.js": "/naukricloneapp/static/js/3.f76cbb96.chunk.js",
     "static/js/3.f76cbb96.chunk.js.map": "/naukricloneapp/static/js/3.f76cbb96.chunk.js.map",
     "index.html": "/naukricloneapp/index.html",
-    "static/css/main.7666b14f.chunk.css.map": "/naukricloneapp/static/css/main.7666b14f.chunk.css.map",
-    "static/js/2.4ecbb7e2.chunk.js.LICENSE.txt": "/naukricloneapp/static/js/2.4ecbb7e2.chunk.js.LICENSE.txt"
+    "static/css/main.ad410c19.chunk.css.map": "/naukricloneapp/static/css/main.ad410c19.chunk.css.map",
+    "static/js/2.43a2bb34.chunk.js.LICENSE.txt": "/naukricloneapp/static/js/2.43a2bb34.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.64466724.js",
-    "static/js/2.4ecbb7e2.chunk.js",
-    "static/css/main.7666b14f.chunk.css",
-    "static/js/main.1c3236aa.chunk.js"
+    "static/js/2.43a2bb34.chunk.js",
+    "static/css/main.ad410c19.chunk.css",
+    "static/js/main.1d246206.chunk.js"
   ]
 }
