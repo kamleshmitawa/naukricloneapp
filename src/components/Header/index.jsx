@@ -33,7 +33,7 @@ export const Header = () => {
     setTimeout(() => setIsLogout(false), 1000);
   };
 
-  console.log(loginResponse, "loginResponse");
+  console.log(loginResponse, "loginResponse", currentPath ==routePath.home);
   return (
     <header>
       <div class="header">
