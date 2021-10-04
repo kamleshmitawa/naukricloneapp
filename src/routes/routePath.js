@@ -1,6 +1,6 @@
 export const routePath = {
-    root: '/',
-    home: '/home',
+    root: 'naukricloneapp/',
+    home: '/naukricloneapp/home',
     login: '/login',
     signUp: '/signup',
     forgot: '/forget-password',
