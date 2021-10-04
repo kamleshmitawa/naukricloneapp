@@ -8,6 +8,7 @@ import { serviceRoute } from "../../apis/serviceRoute";
 import "./login.css";
 import { Button } from "../common/Button";
 import { Loader } from "../common/Loader";
+import { routePath } from "../../routes/routePath";
 
 export const Login = () => {
   const [payload, setPayload] = useState({ email: "", password: "" });
@@ -70,7 +71,7 @@ export const Login = () => {
             <label htmlFor="password" className="passForget">
               <span>Password</span>
               <span className="forgetPassword">
-                <Link to="/forget-password">Forgot your password?</Link>
+                <Link to={routePath.forgot}>Forgot your password?</Link>
               </span>
             </label>
             <input
@@ -91,7 +92,7 @@ export const Login = () => {
           <p>
               New to MyJobs?
               <span>
-                <Link to="/signup"> Create an account</Link>
+                <Link to={routePath.signUp}> Create an account</Link>
               </span>
             </p>
         </form>

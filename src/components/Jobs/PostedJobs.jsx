@@ -61,7 +61,7 @@ export const PostedJobs = () => {
             </div>
           </div>
         </div>
-       <ViewApplicantModal />
+       {/* <ViewApplicantModal /> */}
         <div className="no-jobs">
           <p>Your posted jobs will show here!</p>
           <div className="row post-btn">
