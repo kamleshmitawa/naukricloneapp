@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/naukricloneapp/static/css/main.b4a0ce76.chunk.css",
+    "main.js": "/naukricloneapp/static/js/main.77825334.chunk.js",
+    "main.js.map": "/naukricloneapp/static/js/main.77825334.chunk.js.map",
+    "runtime-main.js": "/naukricloneapp/static/js/runtime-main.bb1cd101.js",
+    "runtime-main.js.map": "/naukricloneapp/static/js/runtime-main.bb1cd101.js.map",
+    "static/js/2.5c09a413.chunk.js": "/naukricloneapp/static/js/2.5c09a413.chunk.js",
+    "static/js/2.5c09a413.chunk.js.map": "/naukricloneapp/static/js/2.5c09a413.chunk.js.map",
+    "static/js/3.1a34719a.chunk.js": "/naukricloneapp/static/js/3.1a34719a.chunk.js",
+    "static/js/3.1a34719a.chunk.js.map": "/naukricloneapp/static/js/3.1a34719a.chunk.js.map",
+    "index.html": "/naukricloneapp/index.html",
+    "static/css/main.b4a0ce76.chunk.css.map": "/naukricloneapp/static/css/main.b4a0ce76.chunk.css.map",
+    "static/js/2.5c09a413.chunk.js.LICENSE.txt": "/naukricloneapp/static/js/2.5c09a413.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb1cd101.js",
+    "static/js/2.5c09a413.chunk.js",
+    "static/css/main.b4a0ce76.chunk.css",
+    "static/js/main.77825334.chunk.js"
+  ]
+}
