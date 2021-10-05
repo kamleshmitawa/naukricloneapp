@@ -19,7 +19,7 @@ export const Home = () => {
             <div class="col-lg-7">
               <figure>
                 <img
-                  src="../../images/happycustomer.jpg"
+                  src="assets/images/happycustomer.jpg"
                   alt="happy-customer"
                   width="622"
                   height="395"
@@ -79,7 +79,7 @@ export const Home = () => {
           <ul>
             <li>
               <figure>
-                <img src="../../images/otherLogo.jpg" alt="otherLogo" />
+                <img src="assets/images/otherLogo.png" alt="otherLogo" />
               </figure>
             </li>
             <li>

@@ -38,7 +38,6 @@ header .header .profile {  display: inline-flex;
     margin: 0px 20px;
     }
     header .header .profile .jobPost a{    color: #fff;
-        text-decoration: none;
     }
     header .header .profile .profileName{    margin: 0px 10px;
     background-color: #d9edf7;

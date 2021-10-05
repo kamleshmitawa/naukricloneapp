@@ -5,23 +5,22 @@ import { Link, useHistory } from "react-router-dom";
 import { routePath } from "../../routes/routePath";
 import { SAVE_USER_LOGIN } from "../../store/types/login.type";
 import { clearLocalStorage } from "../../utils/utils";
-import { Button } from "../common/Button";
 
 export const Header = () => {
-  const [isPostJob, setIsPostJob] = useState(false);
   const [isLogout, setIsLogout] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const { loginResponse } = useSelector((state) => state.login);
   const history = useHistory();
   const dispatch = useDispatch();
-  let currentPath = history?.location?.pathname;
+  // let currentPath = history?.location?.pathname;
 
   useEffect(() => {
     if (loginResponse) {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
+      onLogoutHandler()
     }
   }, [loginResponse]);
 
@@ -33,15 +32,14 @@ export const Header = () => {
     setTimeout(() => setIsLogout(false), 1000);
   };
 
-  console.log(loginResponse, "loginResponse", currentPath ==routePath.home);
   return (
     <header>
       <div class="header">
-        <div className="logo" onClick={() => history.replace(routePath.home)}>
+        <div className="logo" onClick={onLogoutHandler}>
           <span className="logoName">My</span>
           <span className="logoTitle">Jobs</span>
         </div>
-        {(currentPath === routePath.root || currentPath === routePath.home) && (
+        {!isLoggedIn && (
           <div className="loginBtn">
             <Link to={routePath.login}>Login/Signup</Link>
           </div>
@@ -49,14 +47,14 @@ export const Header = () => {
         {isLoggedIn && (
           <div className="profile">
             <div className="jobPost">
-            <Link to={routePath.jobPost}>Post a job</Link>
+              <Link to={routePath.jobPost}>Post a job</Link>
             </div>
-              <div className="profileName">{loginResponse?.name?.charAt(0)}</div>
-              <div className="logoutBtn">
-                <ul>
-                  <li onClick={onLogoutHandler}> logout</li>
-                </ul>
-                </div>
+            <div className="profileName">{loginResponse?.name?.charAt?.(0)}</div>
+            <div className="logoutBtn">
+              <ul>
+                <li onClick={onLogoutHandler}> logout</li>
+              </ul>
+            </div>
           </div>
         )}
         {isLogout && (
