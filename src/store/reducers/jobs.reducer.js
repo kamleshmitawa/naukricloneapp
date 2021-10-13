@@ -5,7 +5,8 @@ import {
   SAVE_POST_JOB_ERROR,
   POSTED_JOB_LOADER,
   SAVE_POSTED_JOB_ERROR,
-  SAVE_POSTED_JOB
+  SAVE_POSTED_JOB,
+  SAVE_POSTED_JOB_ERR
 } from "../types/jobs.type";
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
   postJobResponseErr: "",
   postedJobLoader: false,
   postedJobResponse: null,
+  postedJobResponseErr: ''
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -47,7 +49,14 @@ export default (state = initialState, { type, payload }) => {
         postedJobLoader: false,
       };
     }
-
+    case SAVE_POSTED_JOB_ERR: {
+      return {
+        ...state,
+        postedJobResponse: null,
+        postedJobResponseErr: payload,
+        postedJobLoader: false,
+      };
+    }
     default: {
       return { ...state };
     }

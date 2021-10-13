@@ -13,19 +13,21 @@ export const Header = () => {
   const { loginResponse } = useSelector((state) => state.login);
   const history = useHistory();
   const dispatch = useDispatch();
-  // let currentPath = history?.location?.pathname;
 
   useEffect(() => {
     if (loginResponse) {
       setIsLoggedIn(true);
     } else {
       setIsLoggedIn(false);
-      onLogoutHandler()
+    clearLocalStorage();
+    history.push(routePath.login);
     }
   }, [loginResponse]);
 
-  const onLogoutHandler = () => {
-    setIsLogout(true);
+  const onLogoutHandler = (type = "") => {
+    if (type == "logoutBtn") {
+      setIsLogout(true);
+    }
     clearLocalStorage();
     history.push(routePath.home);
     dispatch({ type: SAVE_USER_LOGIN, payload: null });
@@ -49,10 +51,12 @@ export const Header = () => {
             <div className="jobPost">
               <Link to={routePath.jobPost}>Post a job</Link>
             </div>
-            <div className="profileName">{loginResponse?.name?.charAt?.(0)}</div>
+            <div className="profileName">
+              {loginResponse?.name?.charAt?.(0)}
+            </div>
             <div className="logoutBtn">
               <ul>
-                <li onClick={onLogoutHandler}> logout</li>
+                <li onClick={() => onLogoutHandler("logoutBtn")}> logout</li>
               </ul>
             </div>
           </div>

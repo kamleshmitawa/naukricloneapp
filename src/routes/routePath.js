@@ -6,6 +6,7 @@ export const routePath = {
   forgot: "/naukricloneapp/forget-password",
   reset: "/naukricloneapp/reset",
   logout: "/naukricloneapp/logout",
-  jobsPosted: "/naukricloneapp/jobs/posted",
+  // jobsPosted: "/naukricloneapp/jobs/posted",
+  jobsPosted: "/naukricloneapp/:role/jobs/posted",
   jobPost: "/naukricloneapp/job/post",
 };

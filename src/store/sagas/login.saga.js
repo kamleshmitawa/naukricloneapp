@@ -27,7 +27,11 @@ function* userLogin(action) {
     if (res) {
       setLocalStorage("token", res?.token);
       yield put({ type: SAVE_USER_LOGIN, payload: res });
-      history.push(routePath.jobsPosted);
+      if(res.userRole == 0){
+      history.push('/naukricloneapp/recruiter/jobs/posted');
+      return;
+      }
+      history.push(`/naukricloneapp/candidate/jobs/posted`);
     }
   } catch (err) {
     history?.push(routePath.login);

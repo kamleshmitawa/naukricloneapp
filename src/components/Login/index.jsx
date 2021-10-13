@@ -21,6 +21,7 @@ export const Login = () => {
   useEffect(()=> 
    clearLocalStorage()
   ,[])
+  
   useEffect(() => {
     setErrorMsg(loginResponseErr);
   }, [loginResponseErr]);
